@@ -2,9 +2,9 @@ package main.java.models;
 
 public class Player {
     private String name;
-    private String role;
+    private GamerRole role;
 
-    public Player(String name, String role) {
+    public Player(String name, GamerRole role) {
         this.name = name;
         this.role = role;
     }
@@ -17,11 +17,11 @@ public class Player {
         this.name = newName;
     }
 
-    public String getRole() {
+    public GamerRole getRole() {
         return this.role;
     }
 
-    public void setRole(String newRole) {
+    public void setRole(GamerRole newRole) {
         this.role = newRole;
     }
 }

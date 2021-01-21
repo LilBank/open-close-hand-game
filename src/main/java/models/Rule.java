@@ -1,5 +1,5 @@
 package main.java.models;
 
 public interface Rule {
-    public String validate(String input);
+    public Result validate(String input);
 }

@@ -1,26 +1,23 @@
 package main.java.models;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Game {
     private String name;
-    // private List<Rule> rules;
+    private Rule rule;
 
-    protected Game(String name) {
+    protected Game(String name, Rule rule) {
         this.name = name;
-        // this.rules = new ArrayList<>();
+        this.rule = rule;
     }
 
-    public abstract void play(Player... players);
+    public abstract void play(Player player);
 
-    // protected void addRule(Rule rule) {
-    //     this.rules.add(rule);
-    // }
+    protected void setRule(Rule newRule) {
+        this.rule = newRule;
+    }
 
-    // protected void removeRule(Rule rule) {
-    //     this.rules.remove(rule);
-    // }
+    protected Rule getRule() {
+        return this.rule;
+    }
 
     protected String getName() {
         return this.name;
