@@ -48,7 +48,7 @@ public class OpenCloseHandGame extends Game {
                 gameResult = super.getRule().validate(playerInput.concat(predictorInput));
                 winner = bot;
             }
-            if (gameResult.getStatus()) {
+            if (gameResult.getOutcome()) {
                 System.out.printf("%s %s%n", winner.getName(), gameResult.getMessage());
                 System.out.println("Do you want to play again?");
                 
@@ -71,7 +71,7 @@ public class OpenCloseHandGame extends Game {
         while (true) {
             Result result = rule.validate(scanner.next());
 
-            if (result.getStatus()) {
+            if (result.getOutcome()) {
                 return result.getMessage();
             } else {
                 System.out.println(result.getMessage());

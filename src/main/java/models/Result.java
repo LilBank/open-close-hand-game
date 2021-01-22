@@ -1,16 +1,16 @@
 package main.java.models;
 
 public class Result {
-    private boolean status;
+    private boolean outcome;
     private String message;
 
     public Result(boolean status, String message) {
-        this.status = status;
+        this.outcome = status;
         this.message = message;
     }
 
-    public boolean getStatus() {
-        return this.status;
+    public boolean getOutcome() {
+        return this.outcome;
     }
 
     public String getMessage() {
