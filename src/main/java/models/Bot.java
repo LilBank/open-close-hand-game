@@ -3,6 +3,9 @@ package main.java.models;
 import java.util.List;
 import java.util.Random;
 
+import main.java.models.enums.GamerRole;
+import main.java.models.interfaces.Behavior;
+
 public class Bot extends Player {
     private Behavior behavior;
     private Random randomizer = new Random();

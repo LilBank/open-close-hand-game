@@ -1,5 +1,7 @@
 package main.java.models;
 
+import main.java.models.enums.GamerRole;
+
 public class Player {
     private String name;
     private GamerRole role;

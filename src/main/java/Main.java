@@ -1,6 +1,6 @@
 package main.java;
 
-import main.java.models.GamerRole;
+import main.java.models.enums.GamerRole;
 import main.java.models.OpenCloseHandGame;
 import main.java.models.Player;
 

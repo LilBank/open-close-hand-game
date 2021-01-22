@@ -1,5 +1,7 @@
 package main.java.models;
 
+import main.java.models.interfaces.Rule;
+
 public abstract class Game {
     private String name;
     private Rule rule;

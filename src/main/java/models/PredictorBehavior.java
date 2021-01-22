@@ -3,6 +3,8 @@ package main.java.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import main.java.models.interfaces.Behavior;
+
 public class PredictorBehavior implements Behavior {
 
     @Override
