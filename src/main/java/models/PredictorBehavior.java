@@ -1,7 +1,9 @@
 package main.java.models;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import main.java.models.interfaces.Behavior;
 
@@ -9,14 +11,11 @@ public class PredictorBehavior implements Behavior {
 
     @Override
     public List<String> relatedActions() {
-        String[] defaultAction = {"CC", "CO", "OO"};
-        List<String> actions = new ArrayList<>();
+        Random random = new Random();
+        int randomGuess = random.nextInt(3) + 1;
 
-        for (int i = 0; i < defaultAction.length; i++) {
-            for (int j = 0; j < 5; j++) {
-                actions.add(String.format("%s%d", defaultAction[i], j));
-            }
-        }
+        List<String> actions = new ArrayList<>(Arrays.asList("C", "O"));
+        actions.add(String.valueOf(randomGuess));
 
         return actions;
     }

@@ -1,8 +1,8 @@
 package main.java.models;
 
 public class Result {
-    private boolean outcome;
-    private String message;
+    private final boolean outcome;
+    private final String message;
 
     public Result(boolean status, String message) {
         this.outcome = status;

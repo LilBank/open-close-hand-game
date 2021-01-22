@@ -2,9 +2,11 @@ package main.java.models;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import main.java.models.enums.GamerRole;
 import main.java.models.interfaces.Behavior;
+import main.java.models.interfaces.Rule;
 
 public class Bot extends Player {
     private Behavior behavior;
@@ -15,10 +17,35 @@ public class Bot extends Player {
         this.behavior = behavior;
     }
 
-    public String getRandomAction() {
-        List<String> behaviors = behavior.relatedActions();
+    @Override
+    public String play(Rule rule) {
+        System.out.printf("%s is using his big brain...%n", this.getName());
+        System.out.println("This gonna take me a while :P");
 
-        return behaviors.get(randomizer.nextInt(behaviors.size()));
+        while (true) {
+            List<String> actions = behavior.relatedActions();
+            int inputLimit = randomizer.nextInt(actions.size()) + 1;
+            StringBuilder botInput = new StringBuilder();
+
+            for (int i = 0; i < inputLimit; i++) {
+                botInput.append(actions.get(randomizer.nextInt(actions.size())));
+            }
+
+            Result result = rule.validate(botInput.toString());
+
+            System.out.printf("Bot's big brain input: %s%n", botInput);
+
+            if (result.getOutcome()) {
+                return result.getMessage();
+            } else {
+                System.out.println(result.getMessage());
+            }
+            try {
+                TimeUnit.MILLISECONDS.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void setBehavior(Behavior newBehavior) {
