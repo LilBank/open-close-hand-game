@@ -24,8 +24,4 @@ public class Bot extends Player {
     public void setBehavior(Behavior newBehavior) {
         this.behavior = newBehavior;
     }
-
-    public Behavior getBehavior() {
-        return this.behavior;
-    }
 }

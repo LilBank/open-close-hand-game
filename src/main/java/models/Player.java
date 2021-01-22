@@ -15,10 +15,6 @@ public class Player {
         return this.name;
     }
 
-    public void setName(String newName) {
-        this.name = newName;
-    }
-
     public GamerRole getRole() {
         return this.role;
     }
