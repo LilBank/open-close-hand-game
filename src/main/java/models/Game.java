@@ -11,7 +11,7 @@ public abstract class Game {
         this.rule = rule;
     }
 
-    public abstract void play(Player player);
+    public abstract void start(Player player);
 
     protected Rule getRule() {
         return this.rule;

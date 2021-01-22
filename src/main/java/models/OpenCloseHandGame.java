@@ -9,7 +9,7 @@ public class OpenCloseHandGame extends Game {
     }
 
     @Override
-    public void play(Player player) {
+    public void start(Player player) {
         Player winner = null;
         Result gameResult = null;
         Bot bot = new Bot("AI", GamerRole.PLAYER, new PlayerBehavior());
