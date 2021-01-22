@@ -4,7 +4,6 @@ import main.java.models.Bot;
 import main.java.models.PlayerBehavior;
 import main.java.models.PredictorBehavior;
 import main.java.models.enums.GamerRole;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -16,7 +15,7 @@ public class TestBot {
         PredictorBehavior predictorBehavior = new PredictorBehavior();
         Bot bot = new Bot("AI", GamerRole.PREDICTOR, predictorBehavior);
 
-        String expected = "([CO]|[CO]|[0-4]{1,1}){3,3}";
+        String expected = "([CO]){2}([0-4]){1}";
         String actual = bot.getRandomAction();
 
         assertTrue(actual.matches(expected));
@@ -27,7 +26,7 @@ public class TestBot {
         PredictorBehavior predictorBehavior = new PredictorBehavior();
         Bot bot = new Bot("AI", GamerRole.PREDICTOR, predictorBehavior);
 
-        String expected = "([CO]|[CO]|[0-4]{1,1}){3,3}";
+        String expected = "([CO]){2}([0-4]){1}";
         String actual1 = bot.getRandomAction();
         String actual2 = bot.getRandomAction();
         String actual3 = bot.getRandomAction();
@@ -46,7 +45,7 @@ public class TestBot {
         PlayerBehavior playerBehavior = new PlayerBehavior();
         Bot bot = new Bot("AI", GamerRole.PLAYER, playerBehavior);
 
-        String expected = "([CO]|[CO]){2,2}";
+        String expected = "([CO]){2}";
         String actual = bot.getRandomAction();
 
         assertTrue(actual.matches(expected));
@@ -57,7 +56,7 @@ public class TestBot {
         PlayerBehavior playerBehavior = new PlayerBehavior();
         Bot bot = new Bot("AI", GamerRole.PLAYER, playerBehavior);
 
-        String expected = "([CO]|[CO]){2,2}";
+        String expected = "([CO]){2}";
         String actual1 = bot.getRandomAction();
         String actual2 = bot.getRandomAction();
         String actual3 = bot.getRandomAction();

@@ -3,7 +3,7 @@ package main.java.models;
 import main.java.models.interfaces.Rule;
 
 public class PlayerInputRule implements Rule {
-    private final String PLAYER_INPUT_REGEX = "([CO]|[CO]){2,2}";
+    private final String PLAYER_INPUT_REGEX = "([CO]){2}";
     private final String PLAYER_INPUT_WARNING = "Please input only within these choices: CC, OO, CO, OC";
 
     @Override
