@@ -43,7 +43,7 @@ public class OpenCloseHandGame extends Game {
 
             this.displayGameResult(gameResult);
 
-            isRunning = this.newGameInput(player);
+            isRunning = this.continueGameInput(player);
 
             this.switchPlayersRole(player, bot);
         }
@@ -102,7 +102,7 @@ public class OpenCloseHandGame extends Game {
         }
     }
 
-    private boolean newGameInput(Player player) {
+    private boolean continueGameInput(Player player) {
         System.out.println("Do you want to play again?");
 
         String newGameInput = player.play(super.getRule(NEW_GAME_RULE_NAME));
