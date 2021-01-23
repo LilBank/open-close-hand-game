@@ -1,7 +1,7 @@
 package main.java.models;
 
+import main.java.models.abstracts.Rule;
 import main.java.models.enums.GamerRole;
-import main.java.models.interfaces.Rule;
 
 import java.util.Scanner;
 

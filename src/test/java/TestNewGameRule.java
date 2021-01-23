@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 public class TestNewGameRule {
     @Test
     public void testValidInput() {
-        NewGameRule rule = new NewGameRule();
+        NewGameRule rule = new NewGameRule("New Game Input Rule");
 
         String sampleValidInput = "Y";
 
@@ -18,7 +18,7 @@ public class TestNewGameRule {
 
     @Test
     public void testValidInputs() {
-        NewGameRule rule = new NewGameRule();
+        NewGameRule rule = new NewGameRule("New Game Input Rule");
 
         String sampleValidInput1 = "Y";
         String sampleValidInput2 = "y";
@@ -33,7 +33,7 @@ public class TestNewGameRule {
 
     @Test
     public void testInvalidInput() {
-        NewGameRule rule = new NewGameRule();
+        NewGameRule rule = new NewGameRule("New Game Input Rule");
 
         String sampleInvalidInput = "O";
 
@@ -42,7 +42,7 @@ public class TestNewGameRule {
 
     @Test
     public void testInvalidInputs() {
-        NewGameRule rule = new NewGameRule();
+        NewGameRule rule = new NewGameRule("New Game Input Rule");
 
         String sampleInvalidInput1 = "Z";
         String sampleInvalidInput2 = "Wrong Input";

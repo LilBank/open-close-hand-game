@@ -10,7 +10,7 @@ public class TestPredictionInputRule {
 
     @Test
     public void testValidInput() {
-        PredictorInputRule rule = new PredictorInputRule();
+        PredictorInputRule rule = new PredictorInputRule("Predictor's Input Rule");
 
         String sampleValidInput = "CC0";
 
@@ -19,7 +19,7 @@ public class TestPredictionInputRule {
 
     @Test
     public void testValidInputs() {
-        PredictorInputRule rule = new PredictorInputRule();
+        PredictorInputRule rule = new PredictorInputRule("Predictor's Input Rule");
 
         String sampleValidInput1 = "CC0";
         String sampleValidInput2 = "CO0";
@@ -36,7 +36,7 @@ public class TestPredictionInputRule {
 
     @Test
     public void testInvalidInput() {
-        PredictorInputRule rule = new PredictorInputRule();
+        PredictorInputRule rule = new PredictorInputRule("Predictor's Input Rule");
 
         String sampleInvalidInput = "AA5";
 
@@ -45,7 +45,7 @@ public class TestPredictionInputRule {
 
     @Test
     public void testInvalidInputs() {
-        PredictorInputRule rule = new PredictorInputRule();
+        PredictorInputRule rule = new PredictorInputRule("Predictor's Input Rule");
 
         String sampleInvalidInput1 = "AA5";
         String sampleInvalidInput2 = "Wrong Input";

@@ -1,8 +1,12 @@
 package main.java.models;
 
-import main.java.models.interfaces.Rule;
+import main.java.models.abstracts.Rule;
 
-public class OpenCloseHandRule implements Rule {
+public class OpenCloseHandRule extends Rule {
+
+    public OpenCloseHandRule(String name) {
+        super(name);
+    }
 
     @Override
     public Result validate(String input) {

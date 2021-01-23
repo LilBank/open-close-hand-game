@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 public class TestOpenCloseHandRule {
     @Test
     public void testValidInput() {
-        OpenCloseHandRule rule = new OpenCloseHandRule();
+        OpenCloseHandRule rule = new OpenCloseHandRule("Open Close Hand Game Rule");
 
         String sampleValidInput = "CCOC1";
 
@@ -18,7 +18,7 @@ public class TestOpenCloseHandRule {
 
     @Test
     public void testValidInputs() {
-        OpenCloseHandRule rule = new OpenCloseHandRule();
+        OpenCloseHandRule rule = new OpenCloseHandRule("Open Close Hand Game Rule");
 
         String sampleValidInput1 = "CCCC0";
         String sampleValidInput2 = "CCOO2";
@@ -39,7 +39,7 @@ public class TestOpenCloseHandRule {
 
     @Test
     public void testInvalidInput() {
-        OpenCloseHandRule rule = new OpenCloseHandRule();
+        OpenCloseHandRule rule = new OpenCloseHandRule("Open Close Hand Game Rule");
 
         String sampleInvalidInput = "AACO1";
 
@@ -48,7 +48,7 @@ public class TestOpenCloseHandRule {
 
     @Test
     public void testInvalidInputs() {
-        OpenCloseHandRule rule = new OpenCloseHandRule();
+        OpenCloseHandRule rule = new OpenCloseHandRule("Open Close Hand Game Rule");
 
         String sampleInvalidInput1 = "OOOO0";
         String sampleInvalidInput2 = "CCCC5";
